@@ -1,0 +1,28 @@
+class PvrMovies
+{
+	private static PvrMovies mTicket;
+	private static boolean ticketStatus = false;
+	private PvrMovies()
+	{
+		System.out.println("Welcome to PVR Movies ");
+	}
+	public static PvrMovies bookTickets()
+	{
+		System.out.println("Tickets Booking in Progress");
+		if(ticketStatus == false)
+		{
+			PvrMovies mTicket = new PvrMovies();
+			ticketStatus = true;
+		}
+		return mTicket;
+	}
+}
+	
+class Bookmyshow
+{
+	public static void main(String args[])
+	{
+		PvrMovies custTicket1 = PvrMovies.bookTickets();
+		System.out.println("You Ticket ID is " + custTicket1);
+		}
+}
